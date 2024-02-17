@@ -11,7 +11,7 @@ const MenuBar = () => {
   const socialNetwork = [
     {
       name: "Linkedin",
-      link: "https://www.linkedin.com/in/eric-arrijuria-a64990/",
+      link: "https://www.linkedin.com/in/eric-arrijuria/",
       image: linkedin
     },
     {
