@@ -1,6 +1,7 @@
 'use client'
 import { useState } from "react";
 import axios from "axios";
+import { useRouter } from 'next/navigation'
 
 const Contact = ({url}:{url:string | undefined}) => {
   //Usestate pour récupérer les valeurs du formaulaire
@@ -13,7 +14,7 @@ const Contact = ({url}:{url:string | undefined}) => {
   const [confirmation, setConfirmation] = useState("");
   //Regex pour la validation de l'email
   const emailRegex = /\S+@\S+\.\S+/;
-
+  const router = useRouter();
   //Validation du formulaire et envois du mail
   const validate = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
@@ -33,6 +34,9 @@ const Contact = ({url}:{url:string | undefined}) => {
         .then(() => {
           setConfirmation("Votre message a bien été pris en compte, merci.");
           setEmpty("");
+          setTimeout(() => {
+            router.push('/')
+          }, 1000);
         })
         .catch((err) => console.error(err));
     } else if (!emailRegex.test(mail)) {
