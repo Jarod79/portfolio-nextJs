@@ -2,7 +2,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const Contact = () => {
+const Contact = ({url}:{url:string | undefined}) => {
   //Usestate pour récupérer les valeurs du formaulaire
   const [prenom, setPrenom] = useState("");
   const [nom, setNom] = useState("");
@@ -13,7 +13,6 @@ const Contact = () => {
   const [confirmation, setConfirmation] = useState("");
   //Regex pour la validation de l'email
   const emailRegex = /\S+@\S+\.\S+/;
-  const url = process.env.REACT_APP_URL;
 
   //Validation du formulaire et envois du mail
   const validate = (e: { preventDefault: () => void; }) => {
