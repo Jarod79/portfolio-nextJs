@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+$primary: #f5f8de;
+$secondary: #9e2b25;
+
+$menu: $secondary;
+
+.menuLeft {
+  background-color: rgba(0, 0, 0, 0.096);
+  z-index: 1;
+  position: fixed;
+  width: 100px;
+  height: 100vh;
+  border-right: rgb(61, 0, 0) solid 1px;
+  //Logo to up left bar
+  &__logo {
+    padding-top: 2vh;
+    height: 13vh;
+    & img {
+      width: 50px;
+    }
+  }
+  //Style to burger left bar
+  &__burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 70vh;
+    left: 0;
+  }
+
+  .wrapper {
+    width: 60px;
+    margin: 0 auto;
+  }
+
+  .bigmac {
+    position: absolute;
+    top: 27px;
+    left: 10px;
+    height: 6px;
+    width: 40px;
+    background-color: $secondary;
+    transition: background-color 100ms ease-in;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -12px;
+      left: 0;
+      height: 6px;
+      width: 40px;
+      background-color: $secondary;
+      transition: all 150ms ease-in-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -12px;
+      left: 0;
+      height: 6px;
+      width: 40px;
+      background-color: $secondary;
+      transition: all 150ms ease-in-out;
+    }
+
+    .meat {
+      height: 60px;
+      width: 60px;
+      position: absolute;
+      top: -27px;
+      left: -10px;
+      font-family: "Lato", sans-serif;
+      font-size: 0em;
+      line-height: 60px;
+      text-align: center;
+      text-decoration: none;
+      color: $menu;
+      cursor: pointer;
+      user-select: none;
+      z-index: 2;
+      transition: font-size 275ms ease-out;
+    }
+  }
+
+  .bun {
+    position: relative;
+    width: 60px;
+    height: 60px;
+
+    &:hover {
+      .bigmac {
+        background-color: transparent;
+
+        .meat {
+          font-size: 1.25em;
+        }
+
+        &::before {
+          width: 60px;
+          left: -10px;
+          top: -22px;
+        }
+
+        &::after {
+          width: 60px;
+          left: -10px;
+          bottom: -22px;
+        }
+      }
+    }
+  }
+  //Style to social icons left bar
+  &__social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 4vh;
+    margin-top: 2vh;
+    & img {
+      border-radius: 50%;
+      background-color: rgb(240, 207, 196);
+      width: 35px;
+      height: 35px;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    &__logo {
+      height: 20vh;
+    }
+    &__burger {
+      height: 50vh;
+    }
+    &__social {
+      margin-bottom: 8vh;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    display: flex;
+    border-bottom: rgb(61, 0, 0) solid 1px;
+    height: 90px;
+    width: 100vw;
+    &__burger {
+      height: 100%;
+      width: 60vw;
+    }
+    //Logo to up left bar
+    &__logo {
+      align-self: center;
+      padding-top: 0;
+      height: auto;
+      width: 20vw;
+      & img {
+        width: 50px;
+      }
+    }
+    //Style to social icons left bar
+    &__social {
+      flex-direction: column;
+      width: 10vw;
+      height: 100%;
+      margin-left: 4vw;
+      & img {
+        border-radius: 50%;
+        background-color: white;
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .bigmac {
+      background-color: transparent;
+
+      .meat {
+        font-size: 1.25em;
+      }
+
+      &::before {
+        width: 60px;
+        left: -10px;
+        top: -22px;
+      }
+
+      &::after {
+        width: 60px;
+        left: -10px;
+        bottom: -22px;
+      }
+    }
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+}

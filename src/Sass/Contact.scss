@@ -1,0 +1,108 @@
+.contact {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 94vw;
+  height: 100vh;
+  margin-left: 100px;
+  &__myForm {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40vw;
+  }
+  /* Style inputs with type="text" and textareas */
+  & input[type="text"],
+  textarea,
+  input[type="email"] {
+    padding: 12px;
+    margin: 1vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  textarea {
+    height: 10vh;
+  }
+  label {
+    color: white;
+    margin: 1vh 1vw;
+  }
+  /* Style the submit button*/
+  &__submit {
+    background: hsla(183, 94%, 76%, 0.3);
+    color: white;
+    padding: 12px 20px;
+    margin: 0 1vw;
+    border: none;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+  /* When moving the mouse over the submit button, add a darker color */
+  &__submit:hover {
+    background: hsla(183, 94%, 76%, 0.8);
+  }
+  &__alert {
+    font-size: 1.5vw;
+    color: red;
+    padding: 3vh 0;
+    text-align: center;
+    width: 40vw;
+    text-shadow: black 2px 1px 1px;
+  }
+  &__confirmation {
+    font-size: 1.5vw;
+    color: green;
+    padding: 3vh 0;
+    text-align: center;
+    width: 40vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    margin: 0;
+    &__myForm {
+      width: 80vw;
+    }
+    &__submit {
+      width: 75vw;
+      margin: auto;
+      margin-top: 5vh;
+    }
+    &__alert {
+      font-size: 6vw;
+      width: 60vw;
+      margin: auto;
+    }
+    &__confirmation {
+      font-size: 6vw;
+      width: 60vw;
+      margin: auto;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    width: 88vw;
+    &__myForm {
+      width: 50vw;
+    }
+    &__submit {
+      width: 35vw;
+      margin: auto;
+    }
+    &__alert {
+      font-size: 3vw;
+      margin: auto;
+    }
+    &__confirmation {
+      font-size: 3vw;
+      margin: auto;
+    }
+    & input[type="text"],
+    textarea,
+    input[type="email"] {
+      padding: 3px;
+    }
+    textarea {
+      margin-bottom: 2vh;
+    }
+  }
+}

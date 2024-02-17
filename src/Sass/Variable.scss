@@ -1,0 +1,46 @@
+/* Animation left to right */
+@keyframes slideLeft {
+  0% {
+    transform: translate(-100vw, 0vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideLeftHide {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+
+  100% {
+    transform: translate(-100vw, 0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    transform: translate(100vw, 0vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideUp {
+  0% {
+    transform: translate(0vw, -100vh);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes slideUpHide {
+  0% {
+    transform: translate(0vw, 0vh);
+  }
+
+  100% {
+    transform: translate(0, -100vh);
+  }
+}

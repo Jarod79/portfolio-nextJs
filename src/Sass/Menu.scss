@@ -1,0 +1,73 @@
+.menuClose {
+  z-index: -1;
+  animation-name: slideLeftHide;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: rgb(1, 1, 75);
+  &__link {
+    display: none;
+  }
+  @media screen and (max-width: 768px) {
+    animation-name: slideUpHide;
+    animation-duration: 1s;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    margin-top: 90px;
+  }
+}
+
+.menu {
+  animation-name: slideLeft;
+  animation-duration: 1s;
+  z-index: -10000;
+  top: 0;
+  width: 94vw;
+  height: 100vh;
+  margin-left: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  background-color: rgb(1, 1, 75);
+  &__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 4vw;
+    & a {
+      text-decoration: none;
+      margin: 1vh 2vw;
+      font-size: x-large;
+      color: antiquewhite;
+      transition: 0.3s;
+    }
+    & a:hover {
+      font-size: 3rem;
+      text-decoration: underline;
+      color: antiquewhite;
+    }
+    & .active {
+      text-decoration: underline;
+      color: antiquewhite;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    animation-name: slideUp;
+    animation-duration: 1s;
+    width: 100vw;
+    height: 94vh;
+    margin: 0;
+    margin-top: 80px;
+  }
+}

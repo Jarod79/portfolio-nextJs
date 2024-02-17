@@ -1,0 +1,30 @@
+.about {
+  height: 100vh;
+  margin-left: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & p {
+    width: 50vw;
+    height: 40vh;
+    font-size: 2rem;
+    font-family: "Times New Roman", Times, serif;
+    color: white;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    margin: 0;
+    & p {
+      width: 80vw;
+      height: auto;
+      font-size: 1.3rem;
+    }
+  }
+  @media screen and (max-height: 700px) {
+    width: 94vw;
+    & p {
+      font-size: 1.2rem;
+    }
+  }
+}
