@@ -51,7 +51,7 @@ const Portfolio = () => {
   ))
   return (
     <div className="portfolio">
-      <Carousel withIndicators height={200}  slideGap="md" align="start" className="portfolio__carousel">
+      <Carousel  withIndicators height={200}  slideGap="md" align="start" className="portfolio__carousel">
         {slides}
         </Carousel>
     </div>

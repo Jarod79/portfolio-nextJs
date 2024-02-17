@@ -8,6 +8,9 @@ const Skills = () => {
       text: "JAVASCRIPT"
     },
     {
+      text: "PHP"
+    },
+    {
       text: "HTML5"
     },
     {
@@ -18,6 +21,9 @@ const Skills = () => {
     },
     {
       text: "REACT"
+    },
+    {
+      text: "NEXT JS"
     },
     {
       text: "NODE JS"
@@ -33,6 +39,12 @@ const Skills = () => {
     },
     {
       text: "METHODE AGILE"
+    },
+    {
+      text: "WORDPRESS"
+    },
+    {
+      text: "PRESTASHOP"
     }
   ];
   return (
