@@ -1,7 +1,7 @@
 import Contact from "@/components/Contact"
 
 const ContactPage = () => {
-  const url = process.env.REACT_APP_URL;
+  const url = process.env.APP_URL_API;
   
   return(<Contact url={url}/>)
 }
