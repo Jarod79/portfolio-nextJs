@@ -54,9 +54,11 @@
     }
   }
   @media screen and (max-height: 700px) {
-    width: 88vw;
     &__carousel {
-      width: 40vw;
+      width: 60vw;
+      & .mantine-Carousel-indicator{
+        width: 10vw;
+      }
     }
     .carousel-status {
       display: none;
@@ -69,7 +71,7 @@
     }
     &__link {
       display: block;
-      width: 40vw;
+      width: 60vw;
       height: 15vh;
       padding: 1vh 0;
     }
